@@ -104,6 +104,7 @@ class JugadorTest {
 	/**
 	 * Guardar jugador con edad igual al limite
 	 */
+	@Test
 	void testSetEdadValidaLimite() {
 		Jugador jugador = new Jugador();
 		int edadJugador = 18;
@@ -115,23 +116,25 @@ class JugadorTest {
 	/**
 	 * Guardar jugador con edad menor
 	 */
+	@Test
 	void testSetEdadInvalidaMenor() {
 		Jugador jugador = new Jugador();
 		int edadJugador = 16;
 		jugador.setEdad(edadJugador);
 		
-		assertEquals(0 , jugador.getEdad());
+		assertEquals(-1 , jugador.getEdad());
 	}
 	
 	/**
 	 * Guardar jugador con campo vacio
 	 */
+	@Test
 	void testSetEdadInvalidaVacio() {
 		Jugador jugador = new Jugador();
-		int edadJugador = (Integer) null;
+		int edadJugador=-1;
 		jugador.setEdad(edadJugador);
 		
-		assertEquals(0 , jugador.getEdad());
+		assertEquals(-1 , jugador.getEdad());
 	}
 	
 
@@ -155,6 +158,7 @@ class JugadorTest {
 	/**
 	 * Guardar jugador con idioma valido
 	 */
+	@Test
 	void testSetIdiomaValido02() {
 		Jugador jugador = new Jugador();
 		String idiomaJugador = "Inglés";
@@ -165,6 +169,7 @@ class JugadorTest {
 	/**
 	 * Guardar jugador con idioma valido
 	 */
+	@Test
 	void testSetIdiomaValido03() {
 		Jugador jugador = new Jugador();
 		String idiomaJugador = "Alemán";
@@ -175,6 +180,7 @@ class JugadorTest {
 	/**
 	 * Guardar jugador con idioma valido
 	 */
+	@Test
 	void testSetIdiomaValido04() {
 		Jugador jugador = new Jugador();
 		String idiomaJugador = "Francés";
@@ -186,6 +192,7 @@ class JugadorTest {
 	/**
 	 * Guardar jugador con idioma invalido
 	 */
+	@Test
 	void testSetIdiomaInvalido() {
 		Jugador jugador = new Jugador();
 		String idiomaJugador = "Turco";
@@ -197,6 +204,7 @@ class JugadorTest {
 	/**
 	 * Guardar jugador con idioma vacio
 	 */
+	@Test
 	void testSetIdiomaInvalidoVacio() {
 		Jugador jugador = new Jugador();
 		String idiomaJugador = "";
