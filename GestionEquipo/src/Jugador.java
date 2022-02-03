@@ -10,22 +10,27 @@ public class Jugador {
 
 	public void setNombreJugador(String nombre) {
 		boolean esNulo = false;
-		if (nombre.isEmpty()) {
-			esNulo = true;
-		}
-		if (nombre.length() > 20) {
-			esNulo = true;
-		}
-		for (int i = 0; i <= nombre.length() - 1; i++) {
-			char letra = nombre.charAt(i);
-			if (!Character.isLetter(letra) && letra != 32) {
+		if(nombre==null) {
+			this.nombre=null;
+		}else {
+			if (nombre.isEmpty()) {
 				esNulo = true;
 			}
+			if (nombre.length() > 20) {
+				esNulo = true;
+			}
+			for (int i = 0; i <= nombre.length() - 1; i++) {
+				char letra = nombre.charAt(i);
+				if (!Character.isLetter(letra) && letra != 32) {
+					esNulo = true;
+				}
+			}
+			if (esNulo) {
+				nombre = null;
+			}
+			this.nombre = nombre;
 		}
-		if (esNulo) {
-			nombre = null;
-		}
-		this.nombre = nombre;
+
 	}
 
 	public void setEdad(int edad) {
@@ -37,13 +42,18 @@ public class Jugador {
 	}
 
 	public void setIdioma(String idioma) {
-		if (idioma.equalsIgnoreCase("español") || idioma.equalsIgnoreCase("francés")
-				|| idioma.equalsIgnoreCase("alemán") || idioma.equalsIgnoreCase("inglés")) {
-
+		if(idioma==null) {
+			this.idioma=null;
 		}else {
-			idioma=null;
+			if (idioma.equalsIgnoreCase("español") || idioma.equalsIgnoreCase("francés")
+					|| idioma.equalsIgnoreCase("alemán") || idioma.equalsIgnoreCase("inglés")) {
+
+			}else {
+				idioma=null;
+			}
+			this.idioma=idioma;
 		}
-		this.idioma=idioma;
+
 	}
 
 	public String getIdioma() {

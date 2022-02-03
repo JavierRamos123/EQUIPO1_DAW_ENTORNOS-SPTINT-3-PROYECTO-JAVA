@@ -212,7 +212,7 @@ class JugadorTest {
 		
 		assertEquals(null, jugador.getIdioma());
 	}
-	
+
 
 
 }
