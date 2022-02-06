@@ -22,6 +22,7 @@ public class Equipo {
 				esNulo=true;
 			}
 		}
+		nombreEquipo=nombreEquipo.toUpperCase();
 		if(esNulo) {
 			nombreEquipo=null;
 		}
@@ -42,4 +43,6 @@ public class Equipo {
 	public int getRanking() {
 		return ranking;
 	}
+	
+
 }

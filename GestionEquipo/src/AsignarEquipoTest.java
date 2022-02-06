@@ -10,7 +10,7 @@ class AsignarEquipoTest {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 		/*Creamos un jugador con todos los campos válidos*/
 		Jugador jugador = new Jugador();
-		String nombreJugador = "Antonio";
+		String nombreJugador = "ANTONIO";
 		int edadJugador = 20;
 		String idiomaJugador = "Español";
 		jugador.setNombreJugador(nombreJugador);
@@ -148,7 +148,7 @@ class AsignarEquipoTest {
 		AsignarEquipo asignarJugador = new AsignarEquipo();
 		/*Creamos un equipo con todos los campos válidos*/
 		Equipo equipo = new Equipo();
-		String nombrevalido = "Real Madrid FC";
+		String nombrevalido = "REAL MADRID FC";
 		int rankingvalido = 1;
 		equipo.setNombreEquipo(nombrevalido);
 		equipo.setRanking(rankingvalido);

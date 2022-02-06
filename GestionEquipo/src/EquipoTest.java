@@ -20,7 +20,7 @@ public class EquipoTest {
 	//El campo nombre del equipo contiene menos de 20 caracteres
 	void testSetNombreEquipoValido01() {
 		Equipo equipo = new Equipo();
-		String nombreEquipo = "Real Madrid FC";
+		String nombreEquipo = "REAL MADRID FC";
 		equipo.setNombreEquipo(nombreEquipo);
 		
 		assertEquals(nombreEquipo, equipo.getNombreEquipo());
@@ -29,7 +29,7 @@ public class EquipoTest {
 	@Test
 	void testSetNombreEquipoValido02() {
 		Equipo equipo = new Equipo();
-		String nombreEquipo = "Chargoggagoggmanchau";
+		String nombreEquipo = "CHAQERHAKDFLTUIOPAQK";
 		equipo.setNombreEquipo(nombreEquipo);
 		
 		assertEquals(nombreEquipo, equipo.getNombreEquipo());
@@ -133,6 +133,7 @@ public class EquipoTest {
 	
 	}
 	
+
 	
-	
+
 }

@@ -22,7 +22,7 @@ class JugadorTest {
 	@Test
 	void testSetNombreJugadorValido() {
 		Jugador jugador = new Jugador();
-		String nombreJugador = "Antonio";
+		String nombreJugador = "ANTONIO";
 		jugador.setNombreJugador(nombreJugador);
 		
 		assertEquals(nombreJugador, jugador.getNombreJugador());
@@ -35,7 +35,7 @@ class JugadorTest {
 	
 	void testSetNombreJugadorValidoMaxCaracteres() {
 		Jugador jugador = new Jugador();
-		String nombreJugador = "JoseAntonioDeLaLuces";
+		String nombreJugador = "JOSEANTONIODELALUCES";
 		jugador.setNombreJugador(nombreJugador);
 		
 		assertEquals(nombreJugador,jugador.getNombreJugador());
@@ -88,11 +88,12 @@ class JugadorTest {
 	/**
 	 * Test method for {@link Jugador#setEdad(int)}.
 	 */
-	@Test
+
 	
 	/**
 	 * Guardar jugador con edad válida (mayor)
 	 */
+	@Test
 	void testSetEdadValida() {
 		Jugador jugador = new Jugador();
 		int edadJugador = 20;
@@ -215,4 +216,94 @@ class JugadorTest {
 
 
 
+	// Tests para TipoJugador
+	
+	@Test
+	void testTipoJugadorJunior01() {
+		Jugador jugador = new Jugador();
+		String nombreJugador = "ANTONIO";
+		int edadJugador = 18;
+		String idiomaJugador = "Español";
+		jugador.setNombreJugador(nombreJugador);
+		jugador.setEdad(edadJugador);
+		jugador.setIdioma(idiomaJugador);
+		
+		assertEquals("Junior" , jugador.tipoJugador());
+	}
+	
+	@Test
+	void testTipoJugadorJunior02() {
+		Jugador jugador = new Jugador();
+		String nombreJugador = "ANTONIO";
+		int edadJugador = 20;
+		String idiomaJugador = "Español";
+		jugador.setNombreJugador(nombreJugador);
+		jugador.setEdad(edadJugador);
+		jugador.setIdioma(idiomaJugador);
+		
+		assertEquals("Junior" , jugador.tipoJugador());
+	}
+	@Test
+	void testTipoJugadorJunior03() {
+		Jugador jugador = new Jugador();
+		String nombreJugador = "ANTONIO";
+		int edadJugador = 25;
+		String idiomaJugador = "Español";
+		jugador.setNombreJugador(nombreJugador);
+		jugador.setEdad(edadJugador);
+		jugador.setIdioma(idiomaJugador);
+		
+		assertEquals("Junior" , jugador.tipoJugador());
+	}
+	@Test
+	void testTipoJugadorSenior01() {
+		Jugador jugador = new Jugador();
+		String nombreJugador = "ANTONIO";
+		int edadJugador = 26;
+		String idiomaJugador = "Español";
+		jugador.setNombreJugador(nombreJugador);
+		jugador.setEdad(edadJugador);
+		jugador.setIdioma(idiomaJugador);
+		
+		assertEquals("Senior" , jugador.tipoJugador());
+	}
+	
+	@Test
+	void testTipoJugadorSenior02() {
+		Jugador jugador = new Jugador();
+		String nombreJugador = "ANTONIO";
+		int edadJugador = 30;
+		String idiomaJugador = "Español";
+		jugador.setNombreJugador(nombreJugador);
+		jugador.setEdad(edadJugador);
+		jugador.setIdioma(idiomaJugador);
+		
+		assertEquals("Senior" , jugador.tipoJugador());
+	}
+	@Test
+	void testTipoJugadorSenior03() {
+		Jugador jugador = new Jugador();
+		String nombreJugador = "ANTONIO";
+		int edadJugador = 35;
+		String idiomaJugador = "Español";
+		jugador.setNombreJugador(nombreJugador);
+		jugador.setEdad(edadJugador);
+		jugador.setIdioma(idiomaJugador);
+		
+		assertEquals("Senior" , jugador.tipoJugador());
+	}
+	@Test
+	void testTipoJugadorMaster01() {
+		Jugador jugador = new Jugador();
+		String nombreJugador = "ANTONIO";
+		int edadJugador = 36;
+		String idiomaJugador = "Español";
+		jugador.setNombreJugador(nombreJugador);
+		jugador.setEdad(edadJugador);
+		jugador.setIdioma(idiomaJugador);
+		
+		assertEquals("Master" , jugador.tipoJugador());
+	}
+	
+	
 }

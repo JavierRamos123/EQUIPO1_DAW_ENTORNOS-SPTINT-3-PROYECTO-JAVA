@@ -10,9 +10,10 @@ public class Jugador {
 
 	public void setNombreJugador(String nombre) {
 		boolean esNulo = false;
-		if(nombre==null) {
-			this.nombre=null;
-		}else {
+		if (nombre == null) {
+			this.nombre = null;
+		} else {
+			nombre=nombre.toUpperCase();
 			if (nombre.isEmpty()) {
 				esNulo = true;
 			}
@@ -42,16 +43,16 @@ public class Jugador {
 	}
 
 	public void setIdioma(String idioma) {
-		if(idioma==null) {
-			this.idioma=null;
-		}else {
+		if (idioma == null) {
+			this.idioma = null;
+		} else {
 			if (idioma.equalsIgnoreCase("español") || idioma.equalsIgnoreCase("francés")
 					|| idioma.equalsIgnoreCase("alemán") || idioma.equalsIgnoreCase("inglés")) {
 
-			}else {
-				idioma=null;
+			} else {
+				idioma = null;
 			}
-			this.idioma=idioma;
+			this.idioma = idioma;
 		}
 
 	}
@@ -66,5 +67,9 @@ public class Jugador {
 
 	public int getEdad() {
 		return edad;
+	}
+
+	public String tipoJugador() {
+		
 	}
 }
