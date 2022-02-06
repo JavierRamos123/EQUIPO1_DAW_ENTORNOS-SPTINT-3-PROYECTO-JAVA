@@ -45,6 +45,16 @@ public class Equipo {
 	}
 	
 	public String categoriaEquipo() {
+		if (nombreEquipo != null && ranking != -1) {
+			if(this.ranking>=7 && this.ranking<=10) {
+				return "Primera";
+			}else if(this.ranking>=3 && this.ranking<=6) {
+				return "Segunda";
+			}else if(this.ranking<3) {
+				return "Tercera";
+			}
+		}
+		return null;
 		
 	}
 }
