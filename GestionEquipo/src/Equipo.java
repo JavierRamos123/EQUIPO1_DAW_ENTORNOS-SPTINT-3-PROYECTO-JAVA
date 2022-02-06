@@ -44,5 +44,7 @@ public class Equipo {
 		return ranking;
 	}
 	
-
+	public String categoriaEquipo() {
+		
+	}
 }
