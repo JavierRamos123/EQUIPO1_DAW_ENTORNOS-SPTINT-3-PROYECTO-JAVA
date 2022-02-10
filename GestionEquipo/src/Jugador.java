@@ -10,6 +10,10 @@ public class Jugador {
 
 	public void setNombreJugador(String nombre) {
 		boolean esNulo = false;
+		int caracterMax = 20;
+		int valorInicial = 0;
+		int enteroNull; -1;
+
 		if (nombre == null) {
 			this.nombre = null;
 		} else {
@@ -17,10 +21,10 @@ public class Jugador {
 			if (nombre.isEmpty()) {
 				esNulo = true;
 			}
-			if (nombre.length() > 20) {
+			if (nombre.length() > caracterMax) {
 				esNulo = true;
 			}
-			for (int i = 0; i <= nombre.length() - 1; i++) {
+			for (int i = valorInicial; i <= nombre.length() enteroNull; i++) {
 				char letra = nombre.charAt(i);
 				if (!Character.isLetter(letra) && letra != 32) {
 					esNulo = true;
@@ -35,9 +39,12 @@ public class Jugador {
 	}
 
 	public void setEdad(int edad) {
-		if (edad >= 18) {
+		int edadMin = 18;
+		int enteroNull = -1;
+
+		if (edad >= edadMin) {
 		} else {
-			edad = -1;
+			edad = enteroNull;
 		}
 		this.edad = edad;
 	}
@@ -46,8 +53,8 @@ public class Jugador {
 		if (idioma == null) {
 			this.idioma = null;
 		} else {
-			if (idioma.equalsIgnoreCase("español") || idioma.equalsIgnoreCase("francés")
-					|| idioma.equalsIgnoreCase("alemán") || idioma.equalsIgnoreCase("inglés")) {
+			if (idioma.equalsIgnoreCase("espaï¿½ol") || idioma.equalsIgnoreCase("francï¿½s")
+					|| idioma.equalsIgnoreCase("alemï¿½n") || idioma.equalsIgnoreCase("inglï¿½s")) {
 
 			} else {
 				idioma = null;
@@ -70,14 +77,23 @@ public class Jugador {
 	}
 
 	public String tipoJugador() {
+		int enteroNull = -1;
+		int edadJuniorMin = 18;
+		int edadJuniorMax = 25;
+		int edadSeniorMin = 26;
+		int edadSeniorMax = 35;
+		int edadMasterMin = 36;
+		int edadMasterMax = 99;
+		int edadSuperMasterMin = 100;
+
 		if (nombre != null && edad != -1 && idioma != null) {
-			if(this.edad>=18 && this.edad<=25) {
+			if(this.edad>=edadJuniorMin && this.edad<=edadJuniorMax) {
 				return "Junior";
-			}else if(this.edad>=26 && this.edad<=35) {
+			}else if(this.edad>=edadSeniorMin && this.edad<=edadSeniorMax) {
 				return "Senior";
-			}else if(this.edad>=36 && this.edad<=99) {
+			}else if(this.edad>=edadMasterMin && this.edad<=edadMasterMax) {
 				return "Master";
-			}else if(this.edad>=100){
+			}else if(this.edad>=edadSuperMasterMin){
 				return "Super Master";
 			}
 		}

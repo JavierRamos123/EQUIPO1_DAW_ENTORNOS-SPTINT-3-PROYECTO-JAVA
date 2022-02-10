@@ -10,10 +10,11 @@ public class Equipo {
 	
 	public void setNombreEquipo(String nombreEquipo) {
 		boolean esNulo=false;
+		int maxCaracter= 20;
 		if(nombreEquipo.isEmpty()) {
 			esNulo=true;
 		}
-		if(nombreEquipo.length()>20) {
+		if(nombreEquipo.length()>maxCaracter) {
 			esNulo=true;
 		}
 		for(int i=0;i<=nombreEquipo.length()-1;i++) {
@@ -30,9 +31,12 @@ public class Equipo {
 		
 	}
 	public void setRanking(int ranking) {
-		if(ranking>=0 && ranking<=10) {
+		int enteroNull = -1;
+		int valorMin = 0;
+		int valorMax = 10;
+		if(ranking>=valorMin && ranking<=valorMax) {
 		}else {
-			ranking=-1;
+			ranking=enteroNull;
 		}
 		this.ranking=ranking;
 	}
@@ -45,12 +49,19 @@ public class Equipo {
 	}
 	
 	public String categoriaEquipo() {
-		if (nombreEquipo != null && ranking != -1) {
-			if(this.ranking>=7 && this.ranking<=10) {
+		int enteroNull = -1;
+		int rankingPrimeroMin = 7;
+		int rankingPrimeroMax = 10;
+		int rankingSegundoMin = 3;
+		int rankingSegundoMax = 6;
+		int rankingTerceroMin = 3;
+
+		if (nombreEquipo != null && ranking != enteroNull) {
+			if(this.ranking>= rankingPrimeroMin && this.ranking<=rankingPrimeroMax) {
 				return "Primera";
-			}else if(this.ranking>=3 && this.ranking<=6) {
+			}else if(this.ranking>=rankingSegundoMin && this.ranking<=rankingSegundoMax) {
 				return "Segunda";
-			}else if(this.ranking<3) {
+			}else if(this.ranking<rankingTerceroMin) {
 				return "Tercera";
 			}
 		}
