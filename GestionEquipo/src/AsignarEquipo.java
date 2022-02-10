@@ -9,16 +9,13 @@ public class AsignarEquipo {
       }
       
       public void setEquipo(Equipo equipo) {
-    	  if(equipo==null) {
-    		  this.equipo=null;
-    	  }else {
-        	  if(equipo.getNombreEquipo()!=null && equipo.getRanking()!=-1) {
-        		  this.equipo=equipo;
-        	  }else {
-            	  this.equipo=null;
-        	  }
-    	  }
 
+    	  if(equipo!=null) {
+    		  if(equipo.getNombreEquipo()!=null && equipo.getRanking()!=-1) {
+        		  this.equipo=equipo;
+    		  }
+    	  }
+    	  this.equipo=null;
       }
       
       public void setJugador(Jugador jugador) {

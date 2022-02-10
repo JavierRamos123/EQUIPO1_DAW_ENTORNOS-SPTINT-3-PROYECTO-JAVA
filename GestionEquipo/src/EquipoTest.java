@@ -151,22 +151,13 @@ void testCategoriaEquipoPrimera01() {
 void testCategoriaEquipoPrimera02() {
 	Equipo equipo = new Equipo();
 	String nombrevalido = "REAL MADRID FC";
-	int rankingvalido = 8;
-	equipo.setNombreEquipo(nombrevalido);
-	equipo.setRanking(rankingvalido);
-	
-	assertEquals("Primera" , equipo.categoriaEquipo());
-}
-@Test
-void testCategoriaEquipoPrimera03() {
-	Equipo equipo = new Equipo();
-	String nombrevalido = "REAL MADRID FC";
 	int rankingvalido = 10;
 	equipo.setNombreEquipo(nombrevalido);
 	equipo.setRanking(rankingvalido);
 	
 	assertEquals("Primera" , equipo.categoriaEquipo());
 }
+
 @Test
 void testCategoriaEquipoSegunda01() {
 	Equipo equipo = new Equipo();
@@ -182,22 +173,13 @@ void testCategoriaEquipoSegunda01() {
 void testCategoriaEquipoSegunda02() {
 	Equipo equipo = new Equipo();
 	String nombrevalido = "REAL MADRID FC";
-	int rankingvalido = 5;
-	equipo.setNombreEquipo(nombrevalido);
-	equipo.setRanking(rankingvalido);
-	
-	assertEquals("Segunda" , equipo.categoriaEquipo());
-}
-@Test
-void testCategoriaEquipoSegunda03() {
-	Equipo equipo = new Equipo();
-	String nombrevalido = "REAL MADRID FC";
 	int rankingvalido = 6;
 	equipo.setNombreEquipo(nombrevalido);
 	equipo.setRanking(rankingvalido);
 	
 	assertEquals("Segunda" , equipo.categoriaEquipo());
 }
+
 @Test
 void testCategoriaEquipoTercera01() {
 	Equipo equipo = new Equipo();
