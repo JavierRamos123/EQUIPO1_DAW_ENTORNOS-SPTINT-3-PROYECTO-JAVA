@@ -139,7 +139,7 @@ public class EquipoTest {
 @Test
 void testCategoriaEquipoPrimera01() {
 	Equipo equipo = new Equipo();
-	String nombrevalido = "REAL MADRID FC";
+	String nombrevalido = "REALMADRIDFC";
 	int rankingvalido = 7;
 	equipo.setNombreEquipo(nombrevalido);
 	equipo.setRanking(rankingvalido);
@@ -150,7 +150,7 @@ void testCategoriaEquipoPrimera01() {
 @Test
 void testCategoriaEquipoPrimera02() {
 	Equipo equipo = new Equipo();
-	String nombrevalido = "REAL MADRID FC";
+	String nombrevalido = "REALMADRIDFC";
 	int rankingvalido = 10;
 	equipo.setNombreEquipo(nombrevalido);
 	equipo.setRanking(rankingvalido);
@@ -161,7 +161,7 @@ void testCategoriaEquipoPrimera02() {
 @Test
 void testCategoriaEquipoSegunda01() {
 	Equipo equipo = new Equipo();
-	String nombrevalido = "REAL MADRID FC";
+	String nombrevalido = "REALMADRIDFC";
 	int rankingvalido = 3;
 	equipo.setNombreEquipo(nombrevalido);
 	equipo.setRanking(rankingvalido);
@@ -172,7 +172,7 @@ void testCategoriaEquipoSegunda01() {
 @Test
 void testCategoriaEquipoSegunda02() {
 	Equipo equipo = new Equipo();
-	String nombrevalido = "REAL MADRID FC";
+	String nombrevalido = "REALMADRIDFC";
 	int rankingvalido = 6;
 	equipo.setNombreEquipo(nombrevalido);
 	equipo.setRanking(rankingvalido);
@@ -183,12 +183,34 @@ void testCategoriaEquipoSegunda02() {
 @Test
 void testCategoriaEquipoTercera01() {
 	Equipo equipo = new Equipo();
-	String nombrevalido = "REAL MADRID FC";
+	String nombrevalido = "REALMADRIDFC";
 	int rankingvalido = 1;
 	equipo.setNombreEquipo(nombrevalido);
 	equipo.setRanking(rankingvalido);
 	
 	assertEquals("Tercera" , equipo.categoriaEquipo());
 }
+@Test
+void testCategoriaEquipoNombreNulo() {
+	Equipo equipo = new Equipo();
+	String nombrevalido = null;
+	int rankingvalido = 1;
+	equipo.setNombreEquipo(nombrevalido);
+	equipo.setRanking(rankingvalido);
+	
+	assertEquals(null , equipo.categoriaEquipo());
+}
+
+@Test
+void testCategoriaEquipoRankingNulo() {
+	Equipo equipo = new Equipo();
+	String nombrevalido = "REALMADRIDFC";
+	int rankingvalido = -1;
+	equipo.setNombreEquipo(nombrevalido);
+	equipo.setRanking(rankingvalido);
+	
+	assertEquals(null , equipo.categoriaEquipo());
+}
+
 
 }
