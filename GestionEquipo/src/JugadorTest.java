@@ -91,7 +91,7 @@ class JugadorTest {
 
 	
 	/**
-	 * Guardar jugador con edad válida (mayor)
+	 * Guardar jugador con edad vï¿½lida (mayor)
 	 */
 	@Test
 	void testSetEdadValida() {
@@ -121,9 +121,10 @@ class JugadorTest {
 	void testSetEdadInvalidaMenor() {
 		Jugador jugador = new Jugador();
 		int edadJugador = 16;
+		int enteroNull = -1;
 		jugador.setEdad(edadJugador);
 		
-		assertEquals(-1 , jugador.getEdad());
+		assertEquals(enteroNull , jugador.getEdad());
 	}
 	
 	/**
@@ -133,9 +134,10 @@ class JugadorTest {
 	void testSetEdadInvalidaVacio() {
 		Jugador jugador = new Jugador();
 		int edadJugador=-1;
+		int enteroNull = -1;
 		jugador.setEdad(edadJugador);
 		
-		assertEquals(-1 , jugador.getEdad());
+		assertEquals(enteroNull , jugador.getEdad());
 	}
 	
 
@@ -151,7 +153,7 @@ class JugadorTest {
 	 */
 	void testSetIdiomaValido01() {
 		Jugador jugador = new Jugador();
-		String idiomaJugador = "Español";
+		String idiomaJugador = "Espaï¿½ol";
 		jugador.setIdioma(idiomaJugador);
 		
 		assertEquals(idiomaJugador, jugador.getIdioma());
@@ -162,7 +164,7 @@ class JugadorTest {
 	@Test
 	void testSetIdiomaValido02() {
 		Jugador jugador = new Jugador();
-		String idiomaJugador = "Inglés";
+		String idiomaJugador = "Inglï¿½s";
 		jugador.setIdioma(idiomaJugador);
 		
 		assertEquals(idiomaJugador, jugador.getIdioma());
@@ -173,7 +175,7 @@ class JugadorTest {
 	@Test
 	void testSetIdiomaValido03() {
 		Jugador jugador = new Jugador();
-		String idiomaJugador = "Alemán";
+		String idiomaJugador = "Alemï¿½n";
 		jugador.setIdioma(idiomaJugador);
 		
 		assertEquals(idiomaJugador, jugador.getIdioma());
@@ -184,7 +186,7 @@ class JugadorTest {
 	@Test
 	void testSetIdiomaValido04() {
 		Jugador jugador = new Jugador();
-		String idiomaJugador = "Francés";
+		String idiomaJugador = "Francï¿½s";
 		jugador.setIdioma(idiomaJugador);
 		
 		assertEquals(idiomaJugador, jugador.getIdioma());
@@ -223,7 +225,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "ANTONIO";
 		int edadJugador = 18;
-		String idiomaJugador = "Español";
+		String idiomaJugador = "Espaï¿½ol";
 		jugador.setNombreJugador(nombreJugador);
 		jugador.setEdad(edadJugador);
 		jugador.setIdioma(idiomaJugador);
@@ -236,7 +238,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "ANTONIO";
 		int edadJugador = 20;
-		String idiomaJugador = "Español";
+		String idiomaJugador = "Espaï¿½ol";
 		jugador.setNombreJugador(nombreJugador);
 		jugador.setEdad(edadJugador);
 		jugador.setIdioma(idiomaJugador);
@@ -248,7 +250,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "ANTONIO";
 		int edadJugador = 25;
-		String idiomaJugador = "Español";
+		String idiomaJugador = "Espaï¿½ol";
 		jugador.setNombreJugador(nombreJugador);
 		jugador.setEdad(edadJugador);
 		jugador.setIdioma(idiomaJugador);
@@ -260,7 +262,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "ANTONIO";
 		int edadJugador = 26;
-		String idiomaJugador = "Español";
+		String idiomaJugador = "Espaï¿½ol";
 		jugador.setNombreJugador(nombreJugador);
 		jugador.setEdad(edadJugador);
 		jugador.setIdioma(idiomaJugador);
@@ -273,7 +275,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "ANTONIO";
 		int edadJugador = 30;
-		String idiomaJugador = "Español";
+		String idiomaJugador = "Espaï¿½ol";
 		jugador.setNombreJugador(nombreJugador);
 		jugador.setEdad(edadJugador);
 		jugador.setIdioma(idiomaJugador);
@@ -285,7 +287,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "ANTONIO";
 		int edadJugador = 35;
-		String idiomaJugador = "Español";
+		String idiomaJugador = "Espaï¿½ol";
 		jugador.setNombreJugador(nombreJugador);
 		jugador.setEdad(edadJugador);
 		jugador.setIdioma(idiomaJugador);
@@ -297,7 +299,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "ANTONIO";
 		int edadJugador = 36;
-		String idiomaJugador = "Español";
+		String idiomaJugador = "Espaï¿½ol";
 		jugador.setNombreJugador(nombreJugador);
 		jugador.setEdad(edadJugador);
 		jugador.setIdioma(idiomaJugador);

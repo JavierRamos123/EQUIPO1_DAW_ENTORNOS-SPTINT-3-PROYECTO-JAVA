@@ -35,7 +35,7 @@ public class EquipoTest {
 		assertEquals(nombreEquipo, equipo.getNombreEquipo());
 	}
 	
-	//Este campo es inválido por que supera el mínimo de carácteres
+	//Este campo es invï¿½lido por que supera el mï¿½nimo de carï¿½cteres
 	@Test
 	void testSetNombreEquipoInvalido01() {
 		Equipo equipo = new Equipo();
@@ -44,7 +44,7 @@ public class EquipoTest {
 		
 		assertEquals(null, equipo.getNombreEquipo());
 	}
-	//El campo nombre del equipo contiene números o caracteres especiales
+	//El campo nombre del equipo contiene nï¿½meros o caracteres especiales
 	@Test
 	void testSetNombreEquipoInvalido02() {
 		Equipo equipo = new Equipo();
@@ -62,7 +62,7 @@ public class EquipoTest {
 		
 		assertEquals(null, equipo.getNombreEquipo());
 	}
-	//El campo Ranking es un número mayor que 0 y menor que 10
+	//El campo Ranking es un nï¿½mero mayor que 0 y menor que 10
 	@Test
 	void testSetRankingEquipoValido01() {
 		Equipo ranking = new Equipo();
@@ -77,7 +77,7 @@ public class EquipoTest {
 	void testSetRankingEquipoValido02() {
 		Equipo ranking = new Equipo();
 		int rankingEquipo = 0;
-		ranking.setRanking(0);
+		ranking.setRanking(rankingEquipo);
 		
 		assertEquals(rankingEquipo,ranking.getRanking());
 	
@@ -92,44 +92,48 @@ public class EquipoTest {
 		assertEquals(rankingEquipo,ranking.getRanking());
 	
 	}
-	//El campo Ranking contiene un caracter no numérico
+	//El campo Ranking contiene un caracter no numï¿½rico
 	@Test
 	void testSetRankingEquipoInvalido01() {
+		int rankingEnteroNull = -1;
 		Equipo ranking = new Equipo();
 		String rankingEquipo = "nueve";
-		ranking.setRanking(-1);
+		ranking.setRanking(rankingEnteroNull);
 		
-		assertEquals(-1, ranking.getRanking());
+		assertEquals(rankingEnteroNull, ranking.getRanking());
 	
 	}
-	//El campo Ranking contiene un número menor que 0
+	//El campo Ranking contiene un nï¿½mero menor que 0
 	@Test
 	void testSetRankingEquipoInvalido02() {
+		int rankingEnteroNull = -1;
 		Equipo ranking = new Equipo();
 		int rankingEquipo = -25;
-		ranking.setRanking(-1);
+		ranking.setRanking(-rankingEnteroNull;
 		
-		assertEquals(-1, ranking.getRanking());
+		assertEquals(rankingEnteroNull, ranking.getRanking());
 	
 	}
-	//El campo Ranking contiene un número mayor que 10
+	//El campo Ranking contiene un nï¿½mero mayor que 10
 	@Test
 	void testSetRankingEquipoInvalido03() {
+		int rankingEnteroNull = -1;
 		Equipo ranking = new Equipo();
 		int rankingEquipo = 16;
-		ranking.setRanking(-1);
+		ranking.setRanking(rankingEnteroNull);
 		
-		assertEquals(-1, ranking.getRanking());
+		assertEquals(rankingEnteroNull, ranking.getRanking());
 	
 	}
-	//El campo Ranking está vacío
+	//El campo Ranking estï¿½ vacï¿½o
 	@Test
 	void testSetRankingEquipoVacio01() {
 		Equipo ranking = new Equipo();
 		int rankingEquipo = ' ';
-		ranking.setRanking(-1);
+		int rankingEnteroNull
+		ranking.setRanking(rankingEnteroNull);
 		
-		assertEquals(-1, ranking.getRanking());
+		assertEquals(rankingEnteroNull, ranking.getRanking());
 	
 	}
 	

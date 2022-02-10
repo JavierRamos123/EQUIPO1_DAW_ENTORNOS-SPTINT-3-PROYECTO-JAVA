@@ -20,9 +20,12 @@ public class Equipo {
 	
 
 	public void setRanking(int ranking) {
-		if (ranking >= 0 && ranking <= 10) {
-		} else {
-			ranking = -1;
+		int enteroNull = -1;
+		int valorMin = 0;
+		int valorMax = 10;
+		if(ranking>=valorMin && ranking<=valorMax) {
+		}else {
+			ranking=enteroNull;
 		}
 		this.ranking = ranking;
 	}
@@ -36,20 +39,20 @@ public class Equipo {
 	}
 
 	public String categoriaEquipo() {
-		
-		String categoria=null;
-		String primera="Primera";
-		String segunda="Segunda";
-		String tercera="Tercera";
+		int enteroNull = -1;
+		int rankingPrimeroMin = 7;
+		int rankingPrimeroMax = 10;
+		int rankingSegundoMin = 3;
+		int rankingSegundoMax = 6;
+		int rankingTerceroMin = 3;
 
-		
-		if (this.nombreEquipo != null && this.ranking != -1) {
-			if (this.ranking >= 7 && this.ranking <= 10) {
-				categoria = primera;
-			} else if (this.ranking >= 3 && this.ranking <= 6) {
-				categoria = segunda;
-			} else if (this.ranking < 3) {
-				categoria = tercera;
+		if (nombreEquipo != null && ranking != enteroNull) {
+			if(this.ranking>= rankingPrimeroMin && this.ranking<=rankingPrimeroMax) {
+				return "Primera";
+			}else if(this.ranking>=rankingSegundoMin && this.ranking<=rankingSegundoMax) {
+				return "Segunda";
+			}else if(this.ranking<rankingTerceroMin) {
+				return "Tercera";
 			}
 		}
 		return categoria;
