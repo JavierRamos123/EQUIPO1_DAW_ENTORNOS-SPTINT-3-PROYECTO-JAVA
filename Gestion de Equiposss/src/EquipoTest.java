@@ -4,7 +4,7 @@
  *
  */
 
-package GestionEquipo;
+
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -19,7 +19,7 @@ public class EquipoTest {
 	//El campo nombre del equipo contiene menos de 20 caracteres
 	void testSetNombreEquipoValido01() {
 		Equipo equipo = new Equipo();
-		String nombreEquipo = "REAL MADRID FC";
+		String nombreEquipo = "REALMADRIDFC";
 		equipo.setNombreEquipo(nombreEquipo);
 		
 		assertEquals(nombreEquipo, equipo.getNombreEquipo());

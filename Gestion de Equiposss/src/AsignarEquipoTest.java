@@ -1,4 +1,3 @@
-package GestionEquipo;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -18,7 +17,7 @@ class AsignarEquipoTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "ANTONIO";
 		int edadJugador = 20;
-		String idiomaJugador = "Español";
+		String idiomaJugador = "Espanol";
 		jugador.setNombreJugador(nombreJugador);
 		jugador.setEdad(edadJugador);
 		jugador.setIdioma(idiomaJugador);
@@ -154,7 +153,7 @@ class AsignarEquipoTest {
 		AsignarEquipo asignarJugador = new AsignarEquipo();
 		/*Creamos un equipo con todos los campos válidos*/
 		Equipo equipo = new Equipo();
-		String nombrevalido = "REAL MADRID FC";
+		String nombrevalido = "REALMADRIDFC";
 		int rankingvalido = 1;
 		equipo.setNombreEquipo(nombrevalido);
 		equipo.setRanking(rankingvalido);
