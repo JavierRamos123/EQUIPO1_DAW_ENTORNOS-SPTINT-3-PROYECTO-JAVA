@@ -1,40 +1,110 @@
 package gestionequipo;
 
-public class AsignarEquipo {
-      private Equipo equipo;
-      private Jugador jugador;
-      
-      
-      public AsignarEquipo() {
-    	  
-      }
-      
-      public void setEquipo(Equipo equipo) {
-    	  this.equipo=null;
-		  if(equipo.getNombreEquipo()!=null && equipo.getRanking()!=-1) {
-			  this.equipo=equipo;
-		  }
-      }
-      
-      public void setJugador(Jugador jugador) {
-    	  if(jugador==null) {
-    		  this.jugador=null;
-    	  }else {
-        	  if(jugador.getNombreJugador()!=null && jugador.getEdad()!=-1 && jugador.getIdioma()!=null) {
-        		  this.jugador=jugador;
-        	  }else {
-        		  this.jugador=null;
-        	  }
-    	  }
+/**
+ * 
+ * Esta clase asigna los jugadores de la clase Jugador con los equipos de la
+ * clase Equipo.
+ * 
+ * @author: Equipo 1 DAW.
+ * 
+ * @version: 13/02/2022/A
+ * 
+ */
 
-      }
-      
-      public Equipo getEquipo(){
-          return equipo;
-      }
-      
-      public Jugador getJugador(){
-         return jugador;
-      }
-      
+public class AsignarEquipo {
+
+	// Campos de la clase
+	private Equipo equipo;
+	private Jugador jugador;
+
+	/**
+	 * 
+	 * Constructor para AsignarEquipo.
+	 * 
+	 */
+
+	public AsignarEquipo() {
+
+	} // Cierre del constructor
+
+	/**
+	 * 
+	 * Método que asigna un equipo si sus parámetros son válidos.
+	 * 
+	 * 
+	 * @param equipo define el equipo que queremos asignar.
+	 * 
+	 */
+	public void setEquipo(Equipo equipo) {
+		this.equipo = null;
+		if (esValido()) {
+			this.equipo = equipo;
+		}
+	}
+
+	/**
+	 * 
+	 * Método que asigna un jugador si sus parámetros son válidos.
+	 * 
+	 * 
+	 * @param jugador define el jugador que queremos asignar.
+	 * 
+	 */
+	public void setJugador(Jugador jugador) {
+		if (jugador == null) {
+			this.jugador = null;
+		} else {
+			if (esValido()) {
+				this.jugador = jugador;
+			} else {
+				this.jugador = null;
+			}
+		}
+
+	}
+
+	/**
+	 * 
+	 * Método que asigna un jugador si sus parámetros son válidos.
+	 * 
+	 * 
+	 * @return un booleano que define si el jugador y el equipo son válidos.
+	 * 
+	 */
+
+	public boolean esValido() {
+		int enteroNull = -1;
+		boolean valido = false;
+		if (jugador.getNombreJugador() != null && jugador.getEdad() != -1 && jugador.getIdioma() != null
+				|| equipo.getNombreEquipo() != null && equipo.getRanking() != enteroNull) {
+			valido = true;
+		}
+		return valido;
+
+	}
+
+	/**
+	 * 
+	 * Método que devuelve un equipo.
+	 * 
+	 * 
+	 * @return un equipo.
+	 * 
+	 */
+	public Equipo getEquipo() {
+		return equipo;
+	}
+
+	/**
+	 * 
+	 * Método que devuelve un jugador.
+	 * 
+	 * 
+	 * @return un jugador.
+	 * 
+	 */
+	public Jugador getJugador() {
+		return jugador;
+	}
+
 }
