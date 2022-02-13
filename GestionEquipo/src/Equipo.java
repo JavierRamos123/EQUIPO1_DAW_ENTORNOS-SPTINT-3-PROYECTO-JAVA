@@ -40,6 +40,7 @@ public class Equipo {
 
 	public String categoriaEquipo() {
 		int enteroNull = -1;
+		String categoria = null;
 		int rankingPrimeroMin = 7;
 		int rankingPrimeroMax = 10;
 		int rankingSegundoMin = 3;
@@ -48,11 +49,11 @@ public class Equipo {
 
 		if (nombreEquipo != null && ranking != enteroNull) {
 			if(this.ranking>= rankingPrimeroMin && this.ranking<=rankingPrimeroMax) {
-				return "Primera";
+				categoria = "Primera";
 			}else if(this.ranking>=rankingSegundoMin && this.ranking<=rankingSegundoMax) {
-				return "Segunda";
+				categoria = "Segunda";
 			}else if(this.ranking<rankingTerceroMin) {
-				return "Tercera";
+				categoria = "Tercera";
 			}
 		}
 		return categoria;

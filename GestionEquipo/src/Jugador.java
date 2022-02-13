@@ -12,7 +12,7 @@ public class Jugador {
 		boolean esNulo = false;
 		int caracterMax = 20;
 		int valorInicial = 0;
-		int enteroNull; -1;
+		int enteroNull = -1;
 
 		if (nombre == null) {
 			this.nombre = null;
@@ -24,7 +24,7 @@ public class Jugador {
 			if (nombre.length() > caracterMax) {
 				esNulo = true;
 			}
-			for (int i = valorInicial; i <= nombre.length() enteroNull; i++) {
+			for (int i = valorInicial; i <= nombre.length()-1; i++) {
 				char letra = nombre.charAt(i);
 				if (!Character.isLetter(letra) && letra != 32) {
 					esNulo = true;
