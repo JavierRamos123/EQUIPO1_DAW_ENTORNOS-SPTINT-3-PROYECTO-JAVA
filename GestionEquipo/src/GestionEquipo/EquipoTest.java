@@ -108,7 +108,7 @@ public class EquipoTest {
 		int rankingEnteroNull = -1;
 		Equipo ranking = new Equipo();
 		int rankingEquipo = -25;
-		ranking.setRanking(-rankingEnteroNull);
+		ranking.setRanking(rankingEnteroNull);
 		
 		assertEquals(rankingEnteroNull, ranking.getRanking());
 	

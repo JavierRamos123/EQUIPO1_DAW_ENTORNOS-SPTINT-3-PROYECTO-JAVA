@@ -1,6 +1,6 @@
 package GestionEquipo;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
@@ -93,7 +93,7 @@ class JugadorTest {
 
 	
 	/**
-	 * Guardar jugador con edad v�lida (mayor)
+	 * Guardar jugador con edad valida (mayor)
 	 */
 	@Test
 	void testSetEdadValida() {
