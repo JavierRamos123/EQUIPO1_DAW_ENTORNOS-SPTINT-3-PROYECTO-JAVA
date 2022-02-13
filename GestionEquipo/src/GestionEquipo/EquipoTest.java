@@ -1,8 +1,7 @@
 /**
- * @author Equipo1DAW
+* @author Equipo1DAW
  *
  */
-
 
 package GestionEquipo;
 

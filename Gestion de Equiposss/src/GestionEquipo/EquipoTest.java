@@ -3,6 +3,7 @@
  *
  */
 
+package GestionEquipo;
 
 package gestionequipo;
 
