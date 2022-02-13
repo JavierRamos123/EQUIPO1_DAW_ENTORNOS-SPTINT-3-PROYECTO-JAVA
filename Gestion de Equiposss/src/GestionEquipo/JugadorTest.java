@@ -1,18 +1,16 @@
-package GestionEquipo;
+/**
+ * @author Equipo1DAW
+ *
+ */
+
+package gestionequipo;
 
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-/**
- * 
- */
 
-/**
- * @author Equipo1DAW
- *
- */
 
 
 class JugadorTest {

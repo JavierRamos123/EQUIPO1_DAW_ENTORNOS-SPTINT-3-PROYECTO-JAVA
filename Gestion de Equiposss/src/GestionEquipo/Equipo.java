@@ -1,4 +1,4 @@
-package GestionEquipo;
+package gestionequipo;
 
 
 public class Equipo {

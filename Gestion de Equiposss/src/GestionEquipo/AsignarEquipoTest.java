@@ -1,4 +1,4 @@
-package GestionEquipo;
+package gestionequipo;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -10,11 +10,11 @@ import org.junit.jupiter.api.Test;
 
 class AsignarEquipoTest {
     
-	/*Asignar jugador que exista y tenga todos los campos válidos*/
+	/*Asignar jugador que exista y tenga todos los campos vï¿½lidos*/
 	@Test
 	void testSetJugadorValido() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
-		/*Creamos un jugador con todos los campos válidos*/
+		/*Creamos un jugador con todos los campos vï¿½lidos*/
 		Jugador jugador = new Jugador();
 		String nombreJugador = "ANTONIO";
 		int edadJugador = 20;
@@ -51,11 +51,11 @@ class AsignarEquipoTest {
 	@Test
 	void testSetJugadorInvalidoNombre01() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
-		/*Creamos un jugador con todos los campos válidos*/
+		/*Creamos un jugador con todos los campos vï¿½lidos*/
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Antonio777";
 		int edadJugador = 20;
-		String idiomaJugador = "Español";
+		String idiomaJugador = "Espaï¿½ol";
 		jugador.setNombreJugador(nombreJugador);
 		jugador.setEdad(edadJugador);
 		jugador.setIdioma(idiomaJugador);
@@ -67,10 +67,10 @@ class AsignarEquipoTest {
 	@Test
 	void testSetJugadorInvalidoNombre02() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
-		/*Creamos un jugador con todos los campos válidos y sin el campo de nombre*/
+		/*Creamos un jugador con todos los campos vï¿½lidos y sin el campo de nombre*/
 		Jugador jugador = new Jugador();
 		int edadJugador = 20;
-		String idiomaJugador = "Español";
+		String idiomaJugador = "Espaï¿½ol";
 		jugador.setEdad(edadJugador);
 		jugador.setIdioma(idiomaJugador);
 		
@@ -81,11 +81,11 @@ class AsignarEquipoTest {
 	@Test
 	void testSetJugadorInvalidoEdad01() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
-		/*Creamos un jugador con todos los campos válidos menos la edad*/
+		/*Creamos un jugador con todos los campos vï¿½lidos menos la edad*/
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Antonio";
 		int edadJugador = 0;
-		String idiomaJugador = "Español";
+		String idiomaJugador = "Espaï¿½ol";
 		jugador.setNombreJugador(nombreJugador);
 		jugador.setEdad(edadJugador);
 		jugador.setIdioma(idiomaJugador);
@@ -97,10 +97,10 @@ class AsignarEquipoTest {
 	@Test
 	void testSetJugadorInvalidoEdad02() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
-		/*Creamos un jugador con todos los campos válidos pero sin edad*/
+		/*Creamos un jugador con todos los campos vï¿½lidos pero sin edad*/
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Antonio";
-		String idiomaJugador = "Español";
+		String idiomaJugador = "Espaï¿½ol";
 		jugador.setNombreJugador(nombreJugador);
 		jugador.setIdioma(idiomaJugador);
 		
@@ -111,7 +111,7 @@ class AsignarEquipoTest {
 	@Test
 	void testSetJugadorInvalidoIdioma01() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
-		/*Creamos un jugador con todos los campos válidos menos el idioma*/
+		/*Creamos un jugador con todos los campos vï¿½lidos menos el idioma*/
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Antonio";
 		int edadJugador = 20;
@@ -127,7 +127,7 @@ class AsignarEquipoTest {
 	@Test
 	void testSetJugadorInvalidoIdioma02() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
-		/*Creamos un jugador con todos los campos válidos pero sin idioma*/
+		/*Creamos un jugador con todos los campos vï¿½lidos pero sin idioma*/
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Antonio";
 		int edadJugador = 20;
@@ -152,7 +152,7 @@ class AsignarEquipoTest {
 	@Test
 	void testSetEquipoValido() {
 		AsignarEquipo asignarJugador = new AsignarEquipo();
-		/*Creamos un equipo con todos los campos válidos*/
+		/*Creamos un equipo con todos los campos vï¿½lidos*/
 		Equipo equipo = new Equipo();
 		String nombrevalido = "REALMADRIDFC";
 		int rankingvalido = 1;
@@ -169,7 +169,7 @@ class AsignarEquipoTest {
 	@Test
 	void testSetEquipoInvalidoNombre01() {
 		AsignarEquipo asignarJugador = new AsignarEquipo();
-		/*Creamos un jugador con todos los campos válidos menos el nombre*/
+		/*Creamos un jugador con todos los campos vï¿½lidos menos el nombre*/
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "Les Carpinches777";
 		int rankingEquipo = 2;
@@ -186,7 +186,7 @@ class AsignarEquipoTest {
 	@Test
 	void testSetEquipoInvalidoNombre02() {
 		AsignarEquipo asignarJugador = new AsignarEquipo();
-		/*Creamos un jugador con el campo de ranking válido sin nombre*/
+		/*Creamos un jugador con el campo de ranking vï¿½lido sin nombre*/
 		Equipo equipo = new Equipo();
 		int rankingEquipo = 2;
 		equipo.setRanking(rankingEquipo);
@@ -201,7 +201,7 @@ class AsignarEquipoTest {
 	@Test
 	void testSetEquipoInvalidoRanking01() {
 		AsignarEquipo asignarJugador = new AsignarEquipo();
-		/*Creamos un jugador con el campo de nombre válido y el ranking inválido*/
+		/*Creamos un jugador con el campo de nombre vï¿½lido y el ranking invï¿½lido*/
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "Les Carpinches";
 		int rankingEquipo = 80;
@@ -218,7 +218,7 @@ class AsignarEquipoTest {
 	@Test
 	void testSetEquipoInvalidoRanking02() {
 		AsignarEquipo asignarJugador = new AsignarEquipo();
-		/*Creamos un jugador con el campo de nombre válido sin campo de ranking*/
+		/*Creamos un jugador con el campo de nombre vï¿½lido sin campo de ranking*/
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "Les Carpinches";
 		equipo.setNombreEquipo(nombreEquipo);
