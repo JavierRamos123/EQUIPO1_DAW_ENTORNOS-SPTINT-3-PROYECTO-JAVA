@@ -18,14 +18,14 @@ public class Jugador {
 		if (nombre == null) {
 			this.nombre = null;
 		} else {
-			nombre=nombre.toUpperCase();
+			nombre = nombre.toUpperCase();
 			if (nombre.isEmpty()) {
 				esNulo = true;
 			}
 			if (nombre.length() > caracterMax) {
 				esNulo = true;
 			}
-			for (int i = valorInicial; i <= nombre.length()+enteroNull; i++) {
+			for (int i = valorInicial; i <= nombre.length() + enteroNull; i++) {
 				char letra = nombre.charAt(i);
 				if (!Character.isLetter(letra) && letra != 32) {
 					esNulo = true;
@@ -86,17 +86,17 @@ public class Jugador {
 		int edadMasterMin = 36;
 		int edadMasterMax = 99;
 		int edadSuperMasterMin = 100;
-		String categoria=null;
+		String categoria = null;
 
 		if (nombre != null && edad != enteroNull && idioma != null) {
-			if(this.edad>=edadJuniorMin && this.edad<=edadJuniorMax) {
-				categoria= "Junior";
-			}else if(this.edad>=edadSeniorMin && this.edad<=edadSeniorMax) {
-				categoria= "Senior";
-			}else if(this.edad>=edadMasterMin && this.edad<=edadMasterMax) {
-				categoria= "Master";
-			}else if(this.edad>=edadSuperMasterMin){
-				categoria="Super Master";
+			if (this.edad >= edadJuniorMin && this.edad <= edadJuniorMax) {
+				categoria = "Junior";
+			} else if (this.edad >= edadSeniorMin && this.edad <= edadSeniorMax) {
+				categoria = "Senior";
+			} else if (this.edad >= edadMasterMin && this.edad <= edadMasterMax) {
+				categoria = "Master";
+			} else if (this.edad >= edadSuperMasterMin) {
+				categoria = "Super Master";
 			}
 		}
 		return categoria;
