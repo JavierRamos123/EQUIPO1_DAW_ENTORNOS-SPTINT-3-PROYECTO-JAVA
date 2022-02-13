@@ -1,7 +1,7 @@
 package GestionEquipo;
 
-public class Equipo {
 
+public class Equipo {
 	private String nombreEquipo;
 	private int ranking;
 
@@ -10,22 +10,24 @@ public class Equipo {
 
 	public void setNombreEquipo(String nombreEquipo) {
 		this.nombreEquipo = null;
-		if (nombreEquipo != null) {
-			if (nombreEquipo.length() >= 4 && nombreEquipo.length() <= 20) {
-				if (nombreEquipo.matches("[a-zA-Z]+")) {
-					this.nombreEquipo = nombreEquipo.toUpperCase();
-				}
-			}
-		}
+        if(nombreEquipo != null) {
+            if (nombreEquipo.length()>=4 && nombreEquipo.length()<=20) {
+                if (nombreEquipo.matches("[a-zA-Z]+")){       
+                    this.nombreEquipo=nombreEquipo.toUpperCase();
+                }
+            }
+        }
 	}
+
+	
 
 	public void setRanking(int ranking) {
 		int enteroNull = -1;
 		int valorMin = 0;
 		int valorMax = 10;
-		if (ranking >= valorMin && ranking <= valorMax) {
-		} else {
-			ranking = enteroNull;
+		if(ranking>=valorMin && ranking<=valorMax) {
+		}else {
+			ranking=enteroNull;
 		}
 		this.ranking = ranking;
 	}
@@ -48,11 +50,11 @@ public class Equipo {
 		int rankingTerceroMin = 3;
 
 		if (nombreEquipo != null && ranking != enteroNull) {
-			if (this.ranking >= rankingPrimeroMin && this.ranking <= rankingPrimeroMax) {
+			if(this.ranking>= rankingPrimeroMin && this.ranking<=rankingPrimeroMax) {
 				categoria = "Primera";
-			} else if (this.ranking >= rankingSegundoMin && this.ranking <= rankingSegundoMax) {
+			}else if(this.ranking>=rankingSegundoMin && this.ranking<=rankingSegundoMax) {
 				categoria = "Segunda";
-			} else if (this.ranking < rankingTerceroMin) {
+			}else if(this.ranking<rankingTerceroMin) {
 				categoria = "Tercera";
 			}
 		}
