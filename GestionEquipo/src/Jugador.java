@@ -24,7 +24,7 @@ public class Jugador {
 			if (nombre.length() > caracterMax) {
 				esNulo = true;
 			}
-			for (int i = valorInicial; i <= nombre.length()-1; i++) {
+			for (int i = valorInicial; i <= nombre.length()+enteroNull; i++) {
 				char letra = nombre.charAt(i);
 				if (!Character.isLetter(letra) && letra != 32) {
 					esNulo = true;
@@ -53,8 +53,8 @@ public class Jugador {
 		if (idioma == null) {
 			this.idioma = null;
 		} else {
-			if (idioma.equalsIgnoreCase("espa�ol") || idioma.equalsIgnoreCase("franc�s")
-					|| idioma.equalsIgnoreCase("alem�n") || idioma.equalsIgnoreCase("ingl�s")) {
+			if (idioma.equalsIgnoreCase("espanol") || idioma.equalsIgnoreCase("frances")
+					|| idioma.equalsIgnoreCase("aleman") || idioma.equalsIgnoreCase("ingles")) {
 
 			} else {
 				idioma = null;
@@ -86,7 +86,7 @@ public class Jugador {
 		int edadMasterMax = 99;
 		int edadSuperMasterMin = 100;
 
-		if (nombre != null && edad != -1 && idioma != null) {
+		if (nombre != null && edad != enteroNull && idioma != null) {
 			if(this.edad>=edadJuniorMin && this.edad<=edadJuniorMax) {
 				return "Junior";
 			}else if(this.edad>=edadSeniorMin && this.edad<=edadSeniorMax) {

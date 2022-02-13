@@ -35,7 +35,7 @@ public class EquipoTest {
 		assertEquals(nombreEquipo, equipo.getNombreEquipo());
 	}
 	
-	//Este campo es inv�lido por que supera el m�nimo de car�cteres
+	//Este campo es invalido por que supera el minimo de caracteres
 	@Test
 	void testSetNombreEquipoInvalido01() {
 		Equipo equipo = new Equipo();
@@ -44,7 +44,7 @@ public class EquipoTest {
 		
 		assertEquals(null, equipo.getNombreEquipo());
 	}
-	//El campo nombre del equipo contiene n�meros o caracteres especiales
+	//El campo nombre del equipo contiene numeros o caracteres especiales
 	@Test
 	void testSetNombreEquipoInvalido02() {
 		Equipo equipo = new Equipo();
@@ -62,7 +62,7 @@ public class EquipoTest {
 		
 		assertEquals(null, equipo.getNombreEquipo());
 	}
-	//El campo Ranking es un n�mero mayor que 0 y menor que 10
+	//El campo Ranking es un numero mayor que 0 y menor que 10
 	@Test
 	void testSetRankingEquipoValido01() {
 		Equipo ranking = new Equipo();
@@ -92,7 +92,7 @@ public class EquipoTest {
 		assertEquals(rankingEquipo,ranking.getRanking());
 	
 	}
-	//El campo Ranking contiene un caracter no num�rico
+	//El campo Ranking contiene un caracter no numerico
 	@Test
 	void testSetRankingEquipoInvalido01() {
 		int rankingEnteroNull = -1;
@@ -103,7 +103,7 @@ public class EquipoTest {
 		assertEquals(rankingEnteroNull, ranking.getRanking());
 	
 	}
-	//El campo Ranking contiene un n�mero menor que 0
+	//El campo Ranking contiene un numero menor que 0
 	@Test
 	void testSetRankingEquipoInvalido02() {
 		int rankingEnteroNull = -1;
@@ -114,7 +114,7 @@ public class EquipoTest {
 		assertEquals(rankingEnteroNull, ranking.getRanking());
 	
 	}
-	//El campo Ranking contiene un n�mero mayor que 10
+	//El campo Ranking contiene un numero mayor que 10
 	@Test
 	void testSetRankingEquipoInvalido03() {
 		int rankingEnteroNull = -1;
@@ -129,7 +129,6 @@ public class EquipoTest {
 	@Test
 	void testSetRankingEquipoVacio01() {
 		Equipo ranking = new Equipo();
-		int rankingEquipo = ' ';
 		int rankingEnteroNull = -1;
 		ranking.setRanking(rankingEnteroNull);
 		
