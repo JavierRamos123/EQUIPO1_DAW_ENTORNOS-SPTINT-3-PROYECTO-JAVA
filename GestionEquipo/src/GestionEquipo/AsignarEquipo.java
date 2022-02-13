@@ -3,7 +3,7 @@ package GestionEquipo;
 public class AsignarEquipo {
       private Equipo equipo;
       private Jugador jugador;
-      
+      a
       
       public AsignarEquipo() {
     	  
