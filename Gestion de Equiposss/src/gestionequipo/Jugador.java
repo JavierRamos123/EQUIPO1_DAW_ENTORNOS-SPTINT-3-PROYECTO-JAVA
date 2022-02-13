@@ -1,4 +1,4 @@
-
+package gestionequipo;
 
 public class Jugador {
 	private String nombre;

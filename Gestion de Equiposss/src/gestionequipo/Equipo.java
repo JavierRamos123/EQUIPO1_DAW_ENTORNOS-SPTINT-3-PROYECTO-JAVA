@@ -1,4 +1,5 @@
 
+package gestionequipo;
 
 public class Equipo {
 	private String nombreEquipo;
@@ -40,7 +41,6 @@ public class Equipo {
 	}
 
 	public String categoriaEquipo() {
-		int enteroNull = -1;
 		String categoria = null;
 		int rankingPrimeroMin = 7;
 		int rankingPrimeroMax = 10;
@@ -48,7 +48,7 @@ public class Equipo {
 		int rankingSegundoMax = 6;
 		int rankingTerceroMin = 3;
 
-		if (nombreEquipo != null && ranking != enteroNull) {
+		if (esValido()) {
 			if(this.ranking>= rankingPrimeroMin && this.ranking<=rankingPrimeroMax) {
 				categoria = "Primera";
 			}else if(this.ranking>=rankingSegundoMin && this.ranking<=rankingSegundoMax) {
@@ -60,4 +60,13 @@ public class Equipo {
 		return categoria;
 
 	}
+	public boolean esValido() {
+        int enteroNull=-1;
+        boolean valido=false;
+        if (nombreEquipo != null && ranking!= enteroNull ) {
+            valido = true;
+        }
+        return valido;
+
+    }
 }
