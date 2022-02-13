@@ -1,3 +1,4 @@
+package GestionEquipo;
 
 public class AsignarEquipo {
       private Equipo equipo;
