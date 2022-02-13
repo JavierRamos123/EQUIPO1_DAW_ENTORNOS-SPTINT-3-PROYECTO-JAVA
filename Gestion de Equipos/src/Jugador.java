@@ -1,4 +1,4 @@
-package GestionEquipo;
+
 
 public class Jugador {
 	private String nombre;
@@ -86,18 +86,19 @@ public class Jugador {
 		int edadMasterMin = 36;
 		int edadMasterMax = 99;
 		int edadSuperMasterMin = 100;
+		String categoria=null;
 
 		if (nombre != null && edad != enteroNull && idioma != null) {
 			if(this.edad>=edadJuniorMin && this.edad<=edadJuniorMax) {
-				return "Junior";
+				categoria= "Junior";
 			}else if(this.edad>=edadSeniorMin && this.edad<=edadSeniorMax) {
-				return "Senior";
+				categoria= "Senior";
 			}else if(this.edad>=edadMasterMin && this.edad<=edadMasterMax) {
-				return "Master";
+				categoria= "Master";
 			}else if(this.edad>=edadSuperMasterMin){
-				return "Super Master";
+				categoria="Super Master";
 			}
 		}
-		return null;
+		return categoria;
 	}
 }

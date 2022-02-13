@@ -1,4 +1,3 @@
-package GestionEquipo;
 
 public class AsignarEquipo {
       private Equipo equipo;
@@ -10,13 +9,10 @@ public class AsignarEquipo {
       }
       
       public void setEquipo(Equipo equipo) {
-
-    	  if(equipo!=null) {
-    		  if(equipo.getNombreEquipo()!=null && equipo.getRanking()!=-1) {
-        		  this.equipo=equipo;
-    		  }
-    	  }
     	  this.equipo=null;
+		  if(equipo.getNombreEquipo()!=null && equipo.getRanking()!=-1) {
+			  this.equipo=equipo;
+		  }
       }
       
       public void setJugador(Jugador jugador) {

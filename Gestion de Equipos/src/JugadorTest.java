@@ -1,4 +1,4 @@
-package GestionEquipo;
+
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -155,7 +155,7 @@ class JugadorTest {
 	 */
 	void testSetIdiomaValido01() {
 		Jugador jugador = new Jugador();
-		String idiomaJugador = "Espa�ol";
+		String idiomaJugador = "Espanol";
 		jugador.setIdioma(idiomaJugador);
 		
 		assertEquals(idiomaJugador, jugador.getIdioma());
@@ -166,7 +166,7 @@ class JugadorTest {
 	@Test
 	void testSetIdiomaValido02() {
 		Jugador jugador = new Jugador();
-		String idiomaJugador = "Ingl�s";
+		String idiomaJugador = "Ingles";
 		jugador.setIdioma(idiomaJugador);
 		
 		assertEquals(idiomaJugador, jugador.getIdioma());
@@ -177,7 +177,7 @@ class JugadorTest {
 	@Test
 	void testSetIdiomaValido03() {
 		Jugador jugador = new Jugador();
-		String idiomaJugador = "Alem�n";
+		String idiomaJugador = "Aleman";
 		jugador.setIdioma(idiomaJugador);
 		
 		assertEquals(idiomaJugador, jugador.getIdioma());
@@ -188,7 +188,7 @@ class JugadorTest {
 	@Test
 	void testSetIdiomaValido04() {
 		Jugador jugador = new Jugador();
-		String idiomaJugador = "Franc�s";
+		String idiomaJugador = "Frances";
 		jugador.setIdioma(idiomaJugador);
 		
 		assertEquals(idiomaJugador, jugador.getIdioma());
@@ -227,7 +227,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "ANTONIO";
 		int edadJugador = 18;
-		String idiomaJugador = "Espa�ol";
+		String idiomaJugador = "Espanol";
 		jugador.setNombreJugador(nombreJugador);
 		jugador.setEdad(edadJugador);
 		jugador.setIdioma(idiomaJugador);
@@ -240,7 +240,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "ANTONIO";
 		int edadJugador = 20;
-		String idiomaJugador = "Espa�ol";
+		String idiomaJugador = "Espanol";
 		jugador.setNombreJugador(nombreJugador);
 		jugador.setEdad(edadJugador);
 		jugador.setIdioma(idiomaJugador);
@@ -252,7 +252,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "ANTONIO";
 		int edadJugador = 25;
-		String idiomaJugador = "Espa�ol";
+		String idiomaJugador = "Espanol";
 		jugador.setNombreJugador(nombreJugador);
 		jugador.setEdad(edadJugador);
 		jugador.setIdioma(idiomaJugador);
@@ -264,7 +264,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "ANTONIO";
 		int edadJugador = 26;
-		String idiomaJugador = "Espa�ol";
+		String idiomaJugador = "Espanol";
 		jugador.setNombreJugador(nombreJugador);
 		jugador.setEdad(edadJugador);
 		jugador.setIdioma(idiomaJugador);
@@ -277,7 +277,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "ANTONIO";
 		int edadJugador = 30;
-		String idiomaJugador = "Espa�ol";
+		String idiomaJugador = "Espanol";
 		jugador.setNombreJugador(nombreJugador);
 		jugador.setEdad(edadJugador);
 		jugador.setIdioma(idiomaJugador);
@@ -289,7 +289,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "ANTONIO";
 		int edadJugador = 35;
-		String idiomaJugador = "Espa�ol";
+		String idiomaJugador = "Espanol";
 		jugador.setNombreJugador(nombreJugador);
 		jugador.setEdad(edadJugador);
 		jugador.setIdioma(idiomaJugador);
@@ -301,12 +301,24 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "ANTONIO";
 		int edadJugador = 36;
-		String idiomaJugador = "Espa�ol";
+		String idiomaJugador = "Espanol";
 		jugador.setNombreJugador(nombreJugador);
 		jugador.setEdad(edadJugador);
 		jugador.setIdioma(idiomaJugador);
 		
 		assertEquals("Master" , jugador.tipoJugador());
+	}
+	@Test
+	void testTipoJugadorSuperMaster01() {
+		Jugador jugador = new Jugador();
+		String nombreJugador = "ANTONIO";
+		int edadJugador = 100;
+		String idiomaJugador = "Espanol";
+		jugador.setNombreJugador(nombreJugador);
+		jugador.setEdad(edadJugador);
+		jugador.setIdioma(idiomaJugador);
+		
+		assertEquals("Super Master" , jugador.tipoJugador());
 	}
 	
 	
