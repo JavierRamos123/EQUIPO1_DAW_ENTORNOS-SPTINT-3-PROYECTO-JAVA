@@ -93,8 +93,14 @@ public class Equipo {
 			}else if(this.ranking<rankingTerceroMin) {
 				categoria = "Tercera";
 			}
-		}
+		}	//Cierre del metodo
 		return categoria;
+		 /**
+
+		    * Metodo que sirve para  comprobar la validez   de nombreEquipo y ranking
+		    * @param valido El parametro  valido comprueba si nombreEquipo y ranking son validos
+
+		    */
 
 	}
 	public boolean esValidoEquipo() {
