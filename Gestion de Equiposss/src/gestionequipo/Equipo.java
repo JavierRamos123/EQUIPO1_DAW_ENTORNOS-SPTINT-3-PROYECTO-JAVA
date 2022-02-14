@@ -1,4 +1,3 @@
-
 package gestionequipo;
 /**
  * Esta clase define Equipos
@@ -18,8 +17,8 @@ public class Equipo {
 	
 		 /**
 
-	     * Método que sirve para asignarle un nombre a un Equipo
-	     * @param nombreEquipo El parámetro nombreEquipo define el nombre del Equipo
+	     * Mï¿½todo que sirve para asignarle un nombre a un Equipo
+	     * @param nombreEquipo El parï¿½metro nombreEquipo define el nombre del Equipo
 
 	     */
 	public void setNombreEquipo(String nombreEquipo) {
@@ -35,8 +34,8 @@ public class Equipo {
 	
 	 /**
 
-    * Método que sirve para asignarle El Ranking a un Equipo
-    * @param ranking El parámetro ranking define la  posicion del equipo
+    * Mï¿½todo que sirve para asignarle El Ranking a un Equipo
+    * @param ranking El parï¿½metro ranking define la  posicion del equipo
 
     */
 
@@ -54,8 +53,8 @@ public class Equipo {
 	}//Cierre del metodo
 	 /**
 
-     * Método que sirve para devolver el nombre del Equipo
-     * @param nombreEquipo El parámetro nombreEquipo define el nombre del Equipo
+     * Mï¿½todo que sirve para devolver el nombre del Equipo
+     * @param nombreEquipo El parï¿½metro nombreEquipo define el nombre del Equipo
 
      */
 	public String getNombreEquipo() {
@@ -64,8 +63,8 @@ public class Equipo {
 	//Cierre del metodo
 		 /**
 
-	     * Método que sirve para devolver el ranking del Equipo
-	     * @param ranking El parámetro ranking define el ranking del Equipo
+	     * Mï¿½todo que sirve para devolver el ranking del Equipo
+	     * @param ranking El parï¿½metro ranking define el ranking del Equipo
 
 	     */
 	public int getRanking() {
@@ -73,8 +72,8 @@ public class Equipo {
 	}
 	 /**
 
-	    * Método que sirve para  asignar la categoria a un Equipo
-	    * @param categoria El parámetro categoria define la  categoria del Equipo
+	    * Mï¿½todo que sirve para  asignar la categoria a un Equipo
+	    * @param categoria El parï¿½metro categoria define la  categoria del Equipo
 
 	    */
 
@@ -86,7 +85,7 @@ public class Equipo {
 		int rankingSegundoMax = 6;
 		int rankingTerceroMin = 3;
 
-		if (esValido()) {
+		if (esValidoEquipo()) {
 			if(this.ranking>= rankingPrimeroMin && this.ranking<=rankingPrimeroMax) {
 				categoria = "Primera";
 			}else if(this.ranking>=rankingSegundoMin && this.ranking<=rankingSegundoMax) {
@@ -97,15 +96,8 @@ public class Equipo {
 		}
 		return categoria;
 
-	}//Cierre del metodo
-	 /**
-
-	    * Método que sirve para  comprobar la validez del  nombre del Equipo y ranking
-	    * @param valido El parámetro valido define la  categoria del Equipo
-
-	    */
-
-	public boolean esValido() {
+	}
+	public boolean esValidoEquipo() {
         int enteroNull=-1;
         boolean valido=false;
         if (nombreEquipo != null && ranking!= enteroNull ) {

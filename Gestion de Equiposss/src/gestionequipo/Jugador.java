@@ -1,4 +1,5 @@
 package gestionequipo;
+import gestionequipo.AsignarEquipo;
 
 
  /**
@@ -24,12 +25,12 @@ public class Jugador {
 	}
 	//Cierre del constructor
 	
-	 /**
+	/**
 
-     * Método que sirve para asignarle un nombre a un jugador
-     * @param nombre El parámetro nombre define el nombre del jugador
+    * Método que sirve para asignarle un nombre a un jugador
+    * @param nombre El parámetro nombre define el nombre del jugador
 
-     */
+    */
 
 	public void setNombreJugador(String nombre) {
 		int caracterMax = 20;
@@ -45,31 +46,30 @@ public class Jugador {
 	}
 	//Cierre del metodo
 	
-	 /**
+	/**
 
-     * Método que sirve para asignarle una edad a un jugador
-     * @param edad El parámetro edad define la edad del jugador
+    * Método que sirve para asignarle una edad a un jugador
+    * @param edad El parámetro edad define la edad del jugador
 
-     */
+    */
 
 	public void setEdad(int edad) {
 		int edadMin = 18;
 		int enteroNull = -1;
 
-		if (edad >= edadMin) {
-		} else {
-			edad = enteroNull;
+		if (edad < edadMin) {
+			edad=enteroNull;
 		}
 		this.edad = edad;
 	}
 	//Cierre del metodo
 	
-	 /**
+	/**
 
-     * Método que sirve para asignarle un idioma a un jugador
-     * @param idioma El parámetro idioma define el idioma del jugador
+    * Método que sirve para asignarle un idioma a un jugador
+    * @param idioma El parámetro idioma define el idioma del jugador
 
-     */
+    */
 
 	public void setIdioma(String idioma) {
 
@@ -84,12 +84,12 @@ public class Jugador {
 	}
 	//Cierre del metodo
 	
-	 /**
+	/**
 
-     * Método que sirve para obtener la categoria del jugador a partir de la edad del jugador
-	 * @return La categoria a la que pertenece el jugador
+    * Método que sirve para obtener la categoria del jugador a partir de la edad del jugador
+	* @return La categoria a la que pertenece el jugador
 
-     */
+    */
 
 	public String tipoJugador() {
 		int edadJuniorMin = 18;
@@ -101,7 +101,7 @@ public class Jugador {
 		int edadSuperMasterMin = 100;
 		String categoria = null;
 
-		if (esValido()) {
+		if (esValidoJugador()) {
 			if (this.edad >= edadJuniorMin && this.edad <= edadJuniorMax) {
 				categoria = "Junior";
 			} else if (this.edad >= edadSeniorMin && this.edad <= edadSeniorMax) {
@@ -118,15 +118,15 @@ public class Jugador {
 
 	
 	
-	 /**
+	/**
 
-     * Método que sirve para obtener la validez de un jugador
-	 * @return Un boolean que define si el jugador es valido 
+    * Método que sirve para obtener la validez de un jugador
+	* @return Un boolean que define si el jugador es valido 
 
-     */
+    */
 	
 	
-	public boolean esValido() {
+	public boolean esValidoJugador() {
 		int enteroNull = -1;
 		boolean valido = false;
 		if (nombre != null && edad != enteroNull && idioma != null) {
@@ -137,12 +137,12 @@ public class Jugador {
 	}
 	//Cierre del metodo
 	
-	 /**
+	/**
 
-     * Método que devuelve el idioma del jugador
-	 * @return Un string que define el idioma del jugador
+    * Método que devuelve el idioma del jugador
+	* @return Un string que define el idioma del jugador
 
-     */
+    */
 
 	public String getIdioma() {
 		return idioma;
@@ -150,12 +150,12 @@ public class Jugador {
 	
 	//Cierre del metodo
 	
-	 /**
+	/**
 
-     * Método que devuelve el nombre del jugador
-	 * @return Un string que define el nombre del jugador
+    * Método que devuelve el nombre del jugador
+	* @return Un string que define el nombre del jugador
 
-     */
+    */
 
 
 	public String getNombreJugador() {
@@ -164,12 +164,12 @@ public class Jugador {
 	//Cierre del metodo
 	
 
-	 /**
+	/**
 
-     * Método que devuelve la edad del jugador
-	 * @return Un int que define la edad del jugador
+    * Método que devuelve la edad del jugador
+	* @return Un int que define la edad del jugador
 
-     */
+    */
 
 	public int getEdad() {
 		return edad;
