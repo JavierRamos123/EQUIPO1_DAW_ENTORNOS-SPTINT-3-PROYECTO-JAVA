@@ -37,7 +37,7 @@ public class AsignarEquipo {
 	 */
 	public void setEquipo(Equipo equipo) {
 		this.equipo = null;
-		if (esValido()) {
+		if (equipo.esValidoEquipo()) {
 			this.equipo = equipo;
 		}
 	}
@@ -54,7 +54,7 @@ public class AsignarEquipo {
 		if (jugador == null) {
 			this.jugador = null;
 		} else {
-			if (esValido()) {
+			if (jugador.esValidoJugador()) {
 				this.jugador = jugador;
 			} else {
 				this.jugador = null;
@@ -63,25 +63,6 @@ public class AsignarEquipo {
 
 	}
 
-	/**
-	 * 
-	 * Método que asigna un jugador si sus parámetros son válidos.
-	 * 
-	 * 
-	 * @return un booleano que define si el jugador y el equipo son válidos.
-	 * 
-	 */
-
-	public boolean esValido() {
-		int enteroNull = -1;
-		boolean valido = false;
-		if (jugador.getNombreJugador() != null && jugador.getEdad() != -1 && jugador.getIdioma() != null
-				|| equipo.getNombreEquipo() != null && equipo.getRanking() != enteroNull) {
-			valido = true;
-		}
-		return valido;
-
-	}
 
 	/**
 	 * 
